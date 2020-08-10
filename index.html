@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <!--Icon made by Pixel perfect from www.flaticon.com" -->
+    <link rel="icon" href="spotify-sketch.png" />
+    <title>Top Spotify Artists</title>
+  </head>
+  <body>
+    <div id="header-style">
+      <!--Logo image made by Spotify https://developer.spotify.com/branding-guidelines/-->
+      <a href="https://spotify.com" target="_blank">
+        <img src="./Spotify_Logo_RGB_White.png" id="header-logo" />
+      </a>
+      <h1>My top 20 Spotify Artists - Last 6 Months</h1>
+    </div>
+    <!--Button to trigger the authorisation flow-->
+    <button id="loginWithSpotify">Login with Spotify</button>
+    <!--Div element that is dynamically populated with API response data-->
+    <div id="content-container"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

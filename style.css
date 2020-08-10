@@ -1,0 +1,185 @@
+body {
+  margin: 0px auto;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  background-color: #f8f8f8;
+}
+
+/*Each artist image that is received from the API call */
+.image {
+  width: 320px;
+  height: 290px;
+  display: block;
+  margin: 10px auto;
+}
+
+/*Header Spotify Logo*/
+#header-logo {
+  width: 10%;
+  text-align: center;
+  margin: 0px auto;
+  display: block;
+  padding-top: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+
+/*Container is initially hidden until shopper has authorised Spotify */
+.content_container_hidden {
+  display: none;
+  flex-basis: calc(25% - 10px);
+  flex-wrap: wrap;
+  margin: 0px auto;
+  width: 80%;
+  text-align: center;
+}
+
+/*Container is displayed when shopper has authorised Spotify */
+.content_container_display {
+  display: flex;
+  flex-basis: calc(25% - 10px);
+  flex-wrap: wrap;
+  margin: 0px auto;
+  width: 80%;
+  text-align: center;
+}
+
+/* Login with Spotify button */
+#loginWithSpotify {
+  display: block;
+  width: 25%;
+  text-align: center;
+  margin: 50px auto;
+}
+
+/* Each individual artist container element (width set to 25% to have 4 displayed per row for large screens) */
+.container {
+  width: 25%;
+  margin: 5px auto;
+}
+
+#header-style {
+  width: 100%;
+  background-color: #000000;
+  height: 140px;
+}
+
+/* The number showing the position of the artist */
+.index-position {
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding-top: 5px;
+}
+
+/* Button style underneath each artist which links to the artist on Spotify */
+button {
+  border-radius: 500px;
+  width: 50%;
+  padding: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  background-color: #1db954;
+  color: #ffffff;
+  border-width: 0px;
+  letter-spacing: 2px;
+  transition: background-color 1s;
+}
+
+button:hover {
+  background-color: #1ed760;
+}
+
+/* Media queries to make site responsive - main change is reducing the number of elements shown per row */
+@media screen and (min-width: 1300px) and (max-width: 1700px) {
+  .content_container {
+    flex-basis: calc(33.33% - 10px);
+  }
+
+  .container {
+    width: 33.33%;
+  }
+}
+
+@media screen and (min-width: 901px) and (max-width: 1299px) {
+  .content_container {
+    flex-basis: calc(33.33% - 10px);
+  }
+
+  .container {
+    width: 50%;
+  }
+
+  #header-logo {
+    width: 15%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .content_container {
+    flex-basis: calc(33.33% - 10px);
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .image {
+    width: 350px;
+  }
+
+  #header-logo {
+    width: 25%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .image {
+    width: 250px;
+  }
+
+  #header-style {
+    height: 150px;
+  }
+
+  #header-logo {
+    width: 55%;
+    height: 30%;
+    z-index: 100;
+  }
+
+  button {
+    width: 65%;
+  }
+
+  #loginWithSpotify {
+    width: 50%;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  body {
+    margin: 10px auto;
+  }
+
+  .image {
+    width: 180px;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  #header-logo {
+    width: 35%;
+  }
+}
